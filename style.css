@@ -1,0 +1,153 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+  }
+  /* Loader styles */
+  #preloader {
+    background: #290b24;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+  }
+  .status {
+    margin-top: 16%;
+    text-align: center;
+  }
+  
+  .game-title {
+    color: #ffffff;
+    font-size: 2rem;
+    font-weight: normal;
+  }
+  
+  .inner-title {
+    color: #ffbe00;
+    font-size: 3.5rem;
+    font-weight: normal;
+    margin: auto;
+  }
+  .playtext {
+    color: #ffffff;
+    font-size: 1.2rem;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 20px;
+  }
+  .inner {
+    color: #ffbe00;
+  }
+  .btn {
+    color: #290b24;
+    background: #ffffff;
+    border: 5px solid #ffbe00;
+    border-radius: 15px;
+    font-weight: normal;
+    transition: all 0.3s linear;
+    padding: 10px 30px;
+    margin-top: 20px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .btn:hover {
+    background: #ffbe00;
+    color: #290b24;
+    border: 5px solid #ffffff;
+  }
+  /* Game body styles */
+  .gameBody {
+    display: none;
+    background-color: #290b24;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+  }
+  .cardWrap,
+  .cardRules {
+    background-color: #ffffff;
+    border-radius: 8px;
+    width: 50%;
+    height: 90%;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 14px;
+  }
+  .timerWrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+  }
+  .time {
+    font-weight: 600;
+  }
+  .timer {
+    font-weight: 400;
+  }
+  .rules,
+  .returnToGame {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+  .ruleslistwrap {
+    margin-top: 20px;
+    padding: 20px;
+  }
+  .ruleslist {
+    list-style: circle;
+    line-height: 1.5;
+    color: #290b24;
+  }
+  
+  /* Card styles */
+  .tiles {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  .row {
+    display: flex;
+    gap: 10px;
+  }
+  .hide-color {
+    background-color: #dadada;
+  }
+  .card {
+    display: inline-block;
+    width: 5rem;
+    height: 5rem;
+    cursor: pointer;
+    transition: all 0.1s linear;
+  }
+  
+  /* Crad rules */
+  /* .cardRules {
+    display: none;
+    background-color: #ffffff;
+    border-radius: 8px;
+    width: 50%;
+    height: 80%;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 14px;
+    transform: rotateY(180deg);
+  } */
+  .cardRules {
+    display: none;
+  }
+  
+  .cardWrap.hide {
+    display: none;
+  }
+  .card.disabled {
+    pointer-events: none;
+  }
+ 

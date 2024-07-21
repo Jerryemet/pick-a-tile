@@ -7,20 +7,72 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <div id="preloader" class="preloader">
-        <div class="status">
-          <h1 class="game-title">pick-<span class="inner-title">A</span>-tile</h1>
-          <p class="playtext">
-            <span class="inner">Tap</span> on the tiles to reveal the color
-          </p>
-          <p class="playtext">
-            Correctly match two tiles of same Color to
-            <span class="inner">WIN</span>
-          </p>
-  
-          <button id="start-btn" class="btn">Start</button>
-        </div>
+  <div id="preloader" class="preloader">
+    <div class="status">
+      <h1 class="game-title">pick-<span class="inner-title">A</span>-tile</h1>
+      <p class="playtext">
+        <span class="inner">Tap</span> on the tiles to reveal the color
+      </p>
+      <p class="playtext">
+        Correctly match two tiles of same Color to
+        <span class="inner">WIN</span>
+      </p>
+
+      <button id="start-btn" class="btn">Start</button>
+    </div>
+  </div>
+  <div class="gameBody">
+    <div class="cardWrap">
+      <div class="timerWrap">
+        <p class="time">Time left: <span class="timer">00:05:00</span></p>
+        <p id="rules" class="rules">View rules</p>
       </div>
+      <div class="tiles">
+        <div class="row">
+          <div class="card hide-color"></div>
+          <div class="card hide-color"></div>
+          <div class="card hide-color"></div>
+          <div class="card hide-color"></div>
+          <div class="card hide-color"></div>
+        </div>
+        <div class="row">
+          <div class="card hide-color"></div>
+          <div class="card hide-color"></div>
+          <div class="card hide-color"></div>
+          <div class="card hide-color"></div>
+          <div class="card hide-color"></div>
+        </div>
+        <div class="row">
+          <div class="card hide-color"></div>
+          <div class="card hide-color"></div>
+          <div class="card hide-color"></div>
+          <div class="card hide-color"></div>
+          <div class="card hide-color"></div>
+        </div>
+        <div class="row">
+          <div class="card hide-color"></div>
+          <div class="card hide-color"></div>
+          <div class="card hide-color"></div>
+          <div class="card hide-color"></div>
+          <div class="card hide-color"></div>
+        </div>
+        <button id="restart-btn" class="btn">Restart game</button>
+      </div>
+    </div>
+    <div class="cardRules">
+      <div class="timerWrap">
+        <p class="time">Time left: <span class="timer">00:05:00</span></p>
+        <p id="returnToGame" class="returnToGame">Back to game</p>
+      </div>
+      <div class="ruleslistwrap">
+        <ul class="ruleslist">
+          <li>Correctly match two tiles of same Color within 5mins to WIN</li>
+          <li>If timer runs out before you complete the game, you lose</li>
+          <li>Timer is stopped when you win</li>
+        </ul>
+      </div>
+    </div>
+  </div>
     <script defer src="./app.js"></script>
 </body>
 
