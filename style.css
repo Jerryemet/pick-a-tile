@@ -1,4 +1,4 @@
-* {
+*{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -66,6 +66,13 @@
     height: 100vh;
     justify-content: center;
     align-items: center;
+  }
+  .banner {
+    padding: 20px;
+    color: #ffffff;
+    background-color: #0133b6;
+    text-align: center;
+    display: none;
   }
   .cardWrap,
   .cardRules {
@@ -150,4 +157,3 @@
   .card.disabled {
     pointer-events: none;
   }
- 
