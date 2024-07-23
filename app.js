@@ -72,4 +72,20 @@ function shuffleArray(array) {
       card.setAttribute('data-color', shuffledColors[index]);
     });
   }
+  // start game
+  startBtn.addEventListener('click', () => {
+    preloader.style.display = 'none';
+    game.style.display = 'flex';
+    shuffleColors();
+    startTimer();
+  });
+  
+  // restart game
+  restartBtn.addEventListener('click', () => {
+    location.reload();
+    
+  });
+  console.log(count);
+  console.log(timeLeft);
+  
   
