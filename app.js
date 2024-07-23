@@ -99,3 +99,19 @@ function shuffleArray(array) {
     cardRules.style.display = 'none';
   });
   
+  cards.forEach((card, index) => {
+    card.addEventListener(
+      'click',
+  
+      function onTileClicked(e) {
+        // set the current target for the event.
+        let clicked = e.currentTarget;
+  console.log(clicked)
+        card.style.backgroundColor = shuffledColors[index];
+  
+        // if two tiles match or contains a disabled class, stop code
+        if (clicked === clickedtile || clicked.className.includes('disabled')) {
+          clickedtile = null;
+          return;
+        };
+      
