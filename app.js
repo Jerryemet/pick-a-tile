@@ -88,4 +88,14 @@ function shuffleArray(array) {
   console.log(count);
   console.log(timeLeft);
   
+  // navigate to back of game card to view rules
+  rules.addEventListener('click', () => {
+    cardWrap.style.display = 'none';
+    cardRules.style.display = 'block';
+  });
+  // flip card back to see game
+  returnToGame.addEventListener('click', () => {
+    cardWrap.style.display = 'block';
+    cardRules.style.display = 'none';
+  });
   
