@@ -79,7 +79,6 @@ startBtn.addEventListener('click', () => {
   game.style.display = 'flex';
   shuffleColors();
   startTimer();
-  jsConfetti.addConfetti();
 });
 
 // restart game
@@ -175,7 +174,27 @@ cards.forEach((card, index) => {
   );
 });
 
+function endGame() {
+  if (timeLeft === 0 || count === 6) {
+    // stop timer and disable click action on cards
+    stopTimer();
+    cards.forEach((card) => {
+      card.style.pointerEvents = 'none';
+    });
+  }
+  if (timeLeft === 0) {
+    banner.style.display = 'block';
+    banner.innerHTML = 'Game Over! You lost😢';
+  }
+  if (count === 6) {
+    banner.style.display = 'block';
+    banner.innerHTML = 'Game Over! You won';
+    confetti.start(1000)
+    // add confetti
+  }
 
+  
+}
 
 
 
