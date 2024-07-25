@@ -10,13 +10,13 @@ Pick-A-Tile is a memory game where you have to match pairs of tiles of the same 
 
 ## Getting Started:
 
-2. Click on any tile to reveal its color.
-3. Try to find a matching tile of the same color.
-4. If you find a match, both tiles will remain visible.
-5. If you don't find a match, both tiles will flip back over.
-6. Repeat steps 2-5 until you have matched all the pairs.
-7. If you win, you will see a congratulatory message.
-8. If you lose, you will see a message indicating that you ran out of time.
+1. Click on any tile to reveal its color.
+2. Try to find a matching tile of the same color.
+3. If you find a match, both tiles will remain visible.
+4. If you don't find a match, both tiles will flip back over.
+5. Repeat steps 2-5 until you have matched all the pairs.
+6. If you win, you will see a congratulatory message.
+7. If you lose, you will see a message indicating that you ran out of time.
 # [Play](https://jerryemet.github.io/pick-a-tile/)
 
 ## Rules:
