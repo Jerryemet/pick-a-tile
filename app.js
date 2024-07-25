@@ -22,7 +22,7 @@ let shuffledColors;
 
 /*--------------functions--------------------*/
 function startTimer() {
-  let seconds = 60; // 1 minute = 120 seconds
+  let seconds = 60;
   timer = setInterval(() => {
     seconds--;
     let minutes = Math.floor(seconds / 60);
@@ -54,8 +54,6 @@ function stopTimer() {
   timer = false;
 }
 function shuffleArray(array) {
-  // Fisher-Yates Shuffle Algorithm
-  // Iterate through the duplicated color array, generate a random number and get the position of the color in the array using the randonmly generated number.
   for (let i = array.length - 1; i > 0; i--) {
     let j = Math.floor(Math.random() * (i + 1));
 
@@ -94,7 +92,7 @@ function endGame() {
 }
 
 /*--------------eventlisteners--------------------*/
-// start game
+
 startBtn.addEventListener('click', () => {
   preloader.style.display = 'none';
   game.style.display = 'flex';
@@ -124,7 +122,8 @@ cards.forEach((card, index) => {
     'click',
 
     /*--------------functions continued--------------------*/
-    function onTileClicked(e) {
+
+function onTileClicked(e) {
       
       let clicked = e.currentTarget;
 
