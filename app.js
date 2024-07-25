@@ -1,3 +1,4 @@
+/*--------------Variables--------------------*/
 const startBtn = document.getElementById('start-btn');
 const preloader = document.getElementById('preloader');
 const status = document.querySelector('.status');
@@ -18,7 +19,9 @@ let clickedtile = null;
 let count = 0;
 let timer = null;
 let timeLeft;
+let shuffledColors;
 
+/*--------------functions--------------------*/
 function startTimer() {
   let seconds = 120; // 2 minutes = 120 seconds
   timer = setInterval(() => {
@@ -62,7 +65,7 @@ function shuffleArray(array) {
   }
   return array;
 }
-let shuffledColors;
+
 function shuffleColors() {
   // Shuffle the duplicated colors array
   shuffledColors = shuffleArray(duplicatedColors);
@@ -73,6 +76,29 @@ function shuffleColors() {
   });
 }
 
+function endGame() {
+  if (timeLeft === 0 || count === 6) {
+    // stop timer and disable click action on cards
+    stopTimer();
+    cards.forEach((card) => {
+      card.style.pointerEvents = 'none';
+    });
+  }
+  if (timeLeft === 0) {
+    banner.style.display = 'block';
+    banner.innerHTML = 'Game Over! You lost😢';
+  }
+  if (count === 6) {
+    banner.style.display = 'block';
+    banner.innerHTML = 'Game Over! You won';
+    confetti.start(1000)
+    setInterval(() => {
+      confetti.start(1000)
+    }, 1000);
+  }
+}
+
+/*--------------eventlisteners--------------------*/
 // start game
 startBtn.addEventListener('click', () => {
   preloader.style.display = 'none';
@@ -84,21 +110,8 @@ startBtn.addEventListener('click', () => {
 // restart game
 restartBtn.addEventListener('click', () => {
   location.reload();
-  // clearInterval(timer);
-  // shuffleColors();
-  // startTimer();
-  // cards.forEach((card) => {
-  //   card.style.backgroundColor = null;
-  //   card.style.pointerEvents = 'auto';
-  //   card.classList.add('hide-color');
-  // });
-  // banner.style.display = 'none';
-  // clickedtile = null;
-  // count = 0;
-  // timeLeft = 15;
+ 
 });
-console.log(count);
-console.log(timeLeft);
 
 // navigate to back of game card to view rules
 rules.addEventListener('click', () => {
@@ -123,7 +136,6 @@ cards.forEach((card, index) => {
 
       // if two tiles match or contains a disabled class, stop code
       if (clicked === clickedtile || clicked.className.includes('disabled')) {
-        clickedtile = null;
         return;
       }
       // remove the grey color when a tile is clicked on
@@ -138,14 +150,10 @@ cards.forEach((card, index) => {
           clickedtile.getAttribute('data-color') ===
           clicked.getAttribute('data-color')
         ) {
-          // used innerhtml to change the content of my div
-          // popup.innerHTML =
-          //   ' <img src="./assets/images/bananadance.gif">  </br> Right answer ';
-          // popup.style.display = 'block';
-          // popup.style.border = '5px solid #FFBE00 ';
+          // increment count and run endgame function to check if game should be ended
           count++;
           endGame();
-
+          // remove click action from the tiles
           clicked.classList.add('disabled');
           clickedtile.classList.add('disabled');
           clickedtile = null;
@@ -154,13 +162,8 @@ cards.forEach((card, index) => {
           clickedtile.getAttribute('data-color') !==
           clicked.getAttribute('data-color')
         ) {
-          // popup.innerHTML =
-          //   ' <img src="./assets/images/smh.gif">  </br> Wrong answer ';
-          // popup.style.display = 'block';
-          // popup.style.border = '5px solid #FFBE00 ';
           endGame();
           setTimeout(() => {
-            // popup.style.display = "none";
             clicked.style.backgroundColor = null;
             clickedtile.style.backgroundColor = null;
             clickedtile.classList.add('hide-color');
@@ -174,30 +177,7 @@ cards.forEach((card, index) => {
   );
 });
 
-function endGame() {
-  if (timeLeft === 0 || count === 6) {
-    // stop timer and disable click action on cards
-    stopTimer();
-    cards.forEach((card) => {
-      card.style.pointerEvents = 'none';
-    });
-  }
-  if (timeLeft === 0) {
-    banner.style.display = 'block';
-    banner.innerHTML = 'Game Over! You lost😢';
-  }
-  if (count === 6) {
-    banner.style.display = 'block';
-    banner.innerHTML = 'Game Over! You won';
-    confetti.start(1000)
-    setInterval(() => {
-      confetti.start(1000)
-    }, 1000);
-    // add confetti
-  }
 
-  
-}
 
 
 
