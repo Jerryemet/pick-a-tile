@@ -190,6 +190,9 @@ function endGame() {
     banner.style.display = 'block';
     banner.innerHTML = 'Game Over! You won';
     confetti.start(1000)
+    setInterval(() => {
+      confetti.start(1000)
+    }, 1000);
     // add confetti
   }
 
