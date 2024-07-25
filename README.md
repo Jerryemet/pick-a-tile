@@ -11,7 +11,7 @@ Pick-A-Tile is a memory game where you have to match pairs of tiles of the same 
 
 ## Getting Started
 
-1. Open the #[game](https://jerryemet.github.io/pick-a-tile/) in your browser.
+1. Open the [game](https://jerryemet.github.io/pick-a-tile/) in your browser.
 2. Click on any tile to reveal its color.
 3. Try to find a matching tile of the same color.
 4. If you find a match, both tiles will remain visible.
@@ -25,6 +25,10 @@ Pick-A-Tile is a memory game where you have to match pairs of tiles of the same 
 1. Correctly match two tiles of the same color within one minute to win.
 2. If the timer runs out before you complete the game, you lose.
 3. The timer is stopped when you win.
+
+
+## Planning Materials
+[planning](https://docs.google.com/document/d/1DVz50hKpcoAyV6O8Y8UbmajSIwys5VFaWRmpEqc15_E/edit?usp=sharing)
 
 ## Technologies Used
 
