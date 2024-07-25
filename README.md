@@ -27,7 +27,7 @@ Pick-A-Tile is a memory game where you have to match pairs of tiles of the same 
 3. The timer is stopped when you win.
 
 
-## Planning Materials
+### Planning Materials
 [planning](https://docs.google.com/document/d/1DVz50hKpcoAyV6O8Y8UbmajSIwys5VFaWRmpEqc15_E/edit?usp=sharing)
 
 ## Technologies Used
