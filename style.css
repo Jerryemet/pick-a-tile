@@ -111,7 +111,7 @@
     color: #290b24;
   }
   
-  /* Card styles */
+ /*--------------Card Styles--------------------*/
   .tiles {
     display: flex;
     flex-direction: column;
@@ -135,18 +135,8 @@
     transition: all 0.1s linear;
   }
   
-  /* Crad rules */
-  /* .cardRules {
-    display: none;
-    background-color: #ffffff;
-    border-radius: 8px;
-    width: 50%;
-    height: 80%;
-    cursor: pointer;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    padding: 14px;
-    transform: rotateY(180deg);
-  } */
+/*--------------Card Rules--------------------*/
+  
   .cardRules {
     display: none;
   }
