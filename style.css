@@ -4,7 +4,7 @@
     box-sizing: border-box;
     scroll-behavior: smooth;
   }
-  /* Loader styles */
+ /*--------------Loader Styles--------------------*/
   #preloader {
     background: #290b24;
     position: fixed;
@@ -59,7 +59,7 @@
     color: #290b24;
     border: 5px solid #ffffff;
   }
-  /* Game body styles */
+  /*--------------Game Body Styles--------------------*/
   .gameBody {
     display: none;
     background-color: #290b24;

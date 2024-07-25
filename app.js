@@ -55,7 +55,7 @@ function stopTimer() {
 }
 function shuffleArray(array) {
   // Fisher-Yates Shuffle Algorithm
-  // Iterate through the duplicated color array, generate a random number and get the position of the color in the array using the randonmly generated number. Then swap the positions of the two colors.
+  // Iterate through the duplicated color array, generate a random number and get the position of the color in the array using the randonmly generated number.
   for (let i = array.length - 1; i > 0; i--) {
     let j = Math.floor(Math.random() * (i + 1));
 
@@ -171,7 +171,7 @@ cards.forEach((card, index) => {
     }
   );
 });
-
+/*--------------TheEnd--------------------*/
 
 
 
