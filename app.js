@@ -23,7 +23,7 @@ let shuffledColors;
 
 /*--------------functions--------------------*/
 function startTimer() {
-  let seconds = 120; // 2 minutes = 120 seconds
+  let seconds = 60; // 1 minute = 120 seconds
   timer = setInterval(() => {
     seconds--;
     let minutes = Math.floor(seconds / 60);
