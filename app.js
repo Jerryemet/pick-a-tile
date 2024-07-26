@@ -64,7 +64,6 @@ function shuffleArray(array) {
 
 function shuffleColors() {
   shuffledColors = shuffleArray(duplicatedColors);
-  console.log(shuffledColors);
   cards.forEach((card, index) => {
     card.setAttribute('data-color', shuffledColors[index]);
   });
